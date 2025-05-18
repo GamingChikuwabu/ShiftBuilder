@@ -1,0 +1,158 @@
+.timeline-container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .timeline-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+  
+  .member-input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .member-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  .timeline-grid {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
+  
+  .timeline-content {
+    min-width: 1440px;
+  }
+  
+  .member-column {
+    width: 6rem;
+    flex-shrink: 0;
+    border-right: 1px solid #e5e7eb;
+    background-color: #eeeeeecb;
+  }
+  
+  .member-header {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  .member-cell {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  .shift-block {
+    position: absolute;
+    height: 3rem;
+    background-color: #3b82f6;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+    cursor: move;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+    top: 0.5rem;
+  }
+  
+  .shift-block:hover {
+    opacity: 0.9;
+  }
+  
+  .shift-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1rem;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  .shift-block:hover .shift-handle {
+    opacity: 1;
+  }
+  
+  .shift-handle-left {
+    left: 0;
+  }
+  
+  .shift-handle-right {
+    right: 0;
+  }
+  
+  .shift-time {
+    color: white;
+    font-size: 0.875rem;
+  }
+  
+  .shift-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .remove-button {
+    color: white;
+    transition: color 0.2s;
+  }
+  
+  .remove-button:hover {
+    color: #fecaca;
+  }
+
+  .shift-block {
+    position: absolute;
+    top: 0;
+    height: 32px;
+    background-color: #4caf50;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    cursor: grab;
+  }
+  .shift-handle {
+    width: 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: ew-resize;
+  }
+  .shift-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  @import "tailwindcss";

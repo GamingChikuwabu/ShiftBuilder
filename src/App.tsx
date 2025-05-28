@@ -5,14 +5,18 @@ import HomePage from "./pages/HomePage";
 import ShiftPage from "./pages/ShiftPage";
 import MemberPage from "./pages/MemberPage";
 import LoginPage from "./pages/LoginPage"; // 追加
+import { invoke } from "@tauri-apps/api/core";
 
 function App() {
+  //Tauriのコマンドを呼び出す
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
 
   // 起動時にログイン状態をチェック（初期値：falseでもOK）
   useEffect(() => {
     // 本来はRust側にログイン状態を問い合わせる
-    setIsLoggedIn(false); // 仮に未ログインから始める
+    invoke("is_logged_in").then((result) => {
+      setIsLoggedIn(result as boolean);
+    });
   }, []);
 
   if (isLoggedIn === null) return <div>Loading...</div>;

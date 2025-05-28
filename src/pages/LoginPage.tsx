@@ -8,11 +8,25 @@ const LoginPage: React.FC<Props> = ({ onLogin }) => {
   const openGoogleLoginInBrowser = () => {
     const clientId = "260763329720-s35qh245gtkoidbc27ff9as4c47pbq4s.apps.googleusercontent.com";
     const redirectUri = "http://localhost:8080";
-    const scope = "https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/spreadsheets";
-    const url = `https://accounts.google.com/o/oauth2/v2/auth?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scope)}&access_type=offline`;
+  
+    const scope = [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/drive.file" ,// ✅ Driveファイル作成に必要
+      "https://www.googleapis.com/auth/drive.appdata"
+    ].join(" ");
+  
+    const url = `https://accounts.google.com/o/oauth2/v2/auth` +
+                `?response_type=code` +
+                `&client_id=${clientId}` +
+                `&redirect_uri=${redirectUri}` +
+                `&scope=${encodeURIComponent(scope)}` +
+                `&access_type=offline`;
+  
     console.log("認証URL:", url);
     window.open(url, "_blank");
   };
+  
 
   const handleLogin = async () => {
     try {

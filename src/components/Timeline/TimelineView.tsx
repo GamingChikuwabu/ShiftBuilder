@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { Clock, Plus, X, GripHorizontal } from 'lucide-react';
 import { ShiftEntry } from '../../types/Shift';
 import TimelineHeader from "./TimelineHeader";
 import TimeScaleRow from "./TimeScaleRow";
@@ -25,7 +24,7 @@ const TimeLineView: React.FC<TimeLineViewProps> = ({
   const draggedShift = useRef<{ id: string; startX: number; originalStart: string; originalEnd: string } | null>(null);
   const resizingShift = useRef<{ id: string; startX: number; originalStart: string; originalEnd: string; edge: 'start' | 'end' } | null>(null);
 
-  const hours = Array.from({ length: 24 }, (_, i) => i);
+  
 
   const formatTime = (hour: number, minute: number): string => {
     return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;

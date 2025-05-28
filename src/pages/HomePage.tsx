@@ -1,5 +1,5 @@
 import { invoke } from "@tauri-apps/api/core";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const HomePage = () => {
   const [date, setDate] = useState("");

@@ -3,4 +3,3 @@ const MemberPage = () => {
   };
   
   export default MemberPage;
-  

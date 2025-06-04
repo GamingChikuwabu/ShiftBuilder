@@ -1,6 +1,6 @@
 import React from "react";
 import { GripHorizontal, X } from "lucide-react";
-import { ShiftEntry } from "../../types/Shift";
+import { ShiftEntry } from "../../types/ShiftDataTypes";
 
 interface Props {
   shift: ShiftEntry;

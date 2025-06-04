@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ShiftEntry } from '../../types/Shift';
+import { ShiftEntry } from '../../types/ShiftDataTypes';
 import TimelineHeader from "./TimelineHeader";
 import TimeScaleRow from "./TimeScaleRow";
 import TimelineRow from "./TimelineRow";

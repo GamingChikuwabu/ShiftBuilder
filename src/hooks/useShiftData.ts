@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShiftEntry } from "../types/Shift";
+import { ShiftEntry } from "../types/ShiftDataTypes";
 
 export function useShiftData() {
   const [entries, setEntries] = useState<ShiftEntry[]>([]);

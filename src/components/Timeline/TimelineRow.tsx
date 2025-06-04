@@ -1,4 +1,4 @@
-import { ShiftEntry } from "../../types/Shift";
+import { ShiftEntry } from "../../types/ShiftDataTypes";
 import ShiftItem from "./ShiftItem";
 
 interface Props {

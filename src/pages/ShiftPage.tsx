@@ -1,6 +1,6 @@
 import TimeLineView from '../components/Timeline/TimelineView';
 import { useState } from 'react';
-import { ShiftEntry } from '../types/Shift';
+import { ShiftEntry } from '../types/ShiftDataTypes';
 
 
 
